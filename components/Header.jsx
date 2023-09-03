@@ -7,6 +7,7 @@ import { IoMdHeartEmpty } from "react-icons/io";
 import { BsCart } from "react-icons/bs";
 import { BiMenuAltRight } from "react-icons/bi";
 import { VscChromeClose } from "react-icons/vsc";
+import MenuMobile from './MenuMobile';
 
 const Header = () => {
     const [mobileMenu, setMobileMenu] = useState(false);
@@ -25,6 +26,15 @@ const Header = () => {
                     setShowCatMenu={setShowCatMenu}
                 >
                 </Menu>
+
+                {mobileMenu && (
+                    <MenuMobile
+                        showCatMenu={showCatMenu}
+                        setShowCatMenu={setShowCatMenu}
+                        setMobileMenu={setMobileMenu}
+                    >
+                    </MenuMobile>
+                )}
 
                 <div className='flex items-center gap-1 text-black'>
                     {/* <----- Icon Start -----> */}
