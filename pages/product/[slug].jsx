@@ -105,6 +105,20 @@ const ProductDetails = () => {
                             {/* Show Error End */}
                         </div>
                         {/* Product size range end */}
+
+                        {/* Add to cart button start */}
+                        <button className='w-full py-4 rounded-full bg-black text-white text-lg font-medium transition-transform active:scale-95 mb-3 hover:opacity-75'>
+                            Add to Cart
+                        </button>
+                        {/* Add to cart button end */}
+
+                        {/* Whishlist button start */}
+                        <button className='w-full py-4 rounded-full border border-black text-lg font-medium transition-transform active:scale-95 flex items-center justify-center gap-2 hover:opacity-75 mb-10'>
+                            Whishlist
+                            <IoMdHeartEmpty size={20}></IoMdHeartEmpty>
+                        </button>
+                        {/* Whishlist button end */}
+
                     </div>
                     {/* <-----Right column end-----> */}
                 </div>
