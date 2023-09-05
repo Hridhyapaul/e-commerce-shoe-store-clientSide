@@ -119,8 +119,20 @@ const ProductDetails = () => {
                         </button>
                         {/* Whishlist button end */}
 
+                        <div>
+                            <div className='text-lg font-bold mb-5'>
+                                Product Details
+                            </div>
+                            <div className="markdown text-md mb-5">
+                                Elevate your golf game with the iconic style and premium performance of the Jordan Retro 6 G Men's Golf Shoes. Inspired by the classic Air Jordan 6 basketball shoe, this golf-specific version combines legendary design with cutting-edge golf technology.The Retro 6 G features the unmistakable design elements of the Air Jordan 6, including the distinctive lace toggle and sleek, high-top silhouette. It's a true fusion of basketball heritage and golf innovation.
+                            </div>
+                        </div>
                     </div>
                     {/* <-----Right column end-----> */}
+                </div>
+
+                <div>
+                    <RelatedProducts></RelatedProducts>
                 </div>
             </Wrapper>
         </div>
