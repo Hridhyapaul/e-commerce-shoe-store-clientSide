@@ -37,6 +37,74 @@ const ProductDetails = () => {
                         <div className='text-md font-medium text-black/[0.5] mb-20'>
                             {`(Also includes all applicable duties)`}
                         </div>
+
+                        {/* Product size range start */}
+                        <div className='mb-10'>
+                            {/* Heading Start */}
+                            <div className='flex justify-between mb-2'>
+                                <div className='text-md font-semibold'>
+                                    Select Size
+                                </div>
+                                <div className='text-md font-medium text-black/[0.5] cursor-pointer'>
+                                    Select Guide
+                                </div>
+                            </div>
+                            {/* Heading End */}
+
+                            {/* Size Start */}
+                            <div className='grid grid-cols-3 gap-2'>
+                                <div className='border rounded-md text-center py-3 font-medium hover:border-black cursor-pointer'>
+                                    UK 6
+                                </div>
+                                <div className='border rounded-md text-center py-3 font-medium hover:border-black cursor-pointer'>
+                                    UK 6.5
+                                </div>
+                                <div className='border rounded-md text-center py-3 font-medium hover:border-black cursor-pointer'>
+                                    UK 7
+                                </div>
+                                <div className='border rounded-md text-center py-3 font-medium hover:border-black cursor-pointer'>
+                                    UK 7.5
+                                </div>
+                                <div className='border rounded-md text-center py-3 font-medium hover:border-black cursor-pointer'>
+                                    UK 8
+                                </div>
+                                <div className='border rounded-md text-center py-3 font-medium hover:border-black cursor-pointer'>
+                                    UK 8.5
+                                </div>
+                                <div className='border rounded-md text-center py-3 font-medium hover:border-black cursor-pointer'>
+                                    UK 9
+                                </div>
+                                <div className='border rounded-md text-center py-3 font-medium hover:border-black cursor-pointer'>
+                                    UK 9.5
+                                </div>
+                                <div className='border rounded-md text-center py-3 font-medium hover:border-black cursor-pointer'>
+                                    UK 10
+                                </div>
+                                <div className='border rounded-md text-center py-3 font-medium hover:border-black cursor-pointer'>
+                                    UK 10.5
+                                </div>
+                                <div className='border rounded-md text-center py-3 font-medium hover:border-black cursor-pointer'>
+                                    UK 11
+                                </div>
+                                <div className='border rounded-md text-center py-3 font-medium cursor-not-allowed bg-black/[0.1] opacity-50'>
+                                    UK 11.5
+                                </div>
+                                <div className='border rounded-md text-center py-3 font-medium cursor-not-allowed bg-black/[0.1] opacity-50'>
+                                    UK 12
+                                </div>
+                                <div className='border rounded-md text-center py-3 font-medium cursor-not-allowed bg-black/[0.1] opacity-50'>
+                                    UK 12.5
+                                </div>
+                            </div>
+                            {/* Size End */}
+
+                            {/* Show Error Start */}
+                            <div className='text-red-600 mt-1'>
+                                Size selection is required
+                            </div>
+                            {/* Show Error End */}
+                        </div>
+                        {/* Product size range end */}
                     </div>
                     {/* <-----Right column end-----> */}
                 </div>
