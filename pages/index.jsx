@@ -1,12 +1,12 @@
 import HeroBanner from "@/components/HeroBanner";
+import ProductCard from "@/components/ProductCard";
 import Wrapper from "@/components/Wrapper";
 
 export default function Home() {
   return (
     <main>
-      <Wrapper>
-        <HeroBanner></HeroBanner>
-      </Wrapper>
+      <HeroBanner></HeroBanner>
+      
     </main>
   )
 }
