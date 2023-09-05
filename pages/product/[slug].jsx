@@ -14,6 +14,31 @@ const ProductDetails = () => {
                         <ProductDetailsCarousel></ProductDetailsCarousel>
                     </div>
                     {/* <-----Left column End-----> */}
+
+                    {/* <-----Right column start-----> */}
+                    <div className='flex-[1] py-3'>
+                        {/* product title */}
+                        <div className='text-[34px] font-semibold mb-2'>
+                            Jordan Retro 6 G
+                        </div>
+
+                        {/* Product subtitle */}
+                        <div className='text-lg font-semibold mb-5'>
+                            Men&apos;s Golf Shoes
+                        </div>
+
+                        {/* Product Price */}
+                        <div className='text-lg font-semibold'>
+                            MRP : $149.99
+                        </div>
+                        <div className='text-md font-medium text-black/[0.5]'>
+                            incl. of taxes
+                        </div>
+                        <div className='text-md font-medium text-black/[0.5] mb-20'>
+                            {`(Also includes all applicable duties)`}
+                        </div>
+                    </div>
+                    {/* <-----Right column end-----> */}
                 </div>
             </Wrapper>
         </div>
