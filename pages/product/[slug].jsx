@@ -3,15 +3,18 @@ import React from 'react';
 import { IoMdHeartEmpty } from "react-icons/io";
 import ProductDetailsCarousel from '@/components/ProductDetailsCarousel';
 import RelatedProducts from '@/components/RelatedProducts';
+import { fetchDataFromApi } from '@/utils/api';
 
-const ProductDetails = () => {
+const ProductDetails = ({ product, products }) => {
+    console.log(product, products)
+    const p = product?.data?.[0]?.attributes;
     return (
         <div className='w-full md:py-20'>
             <Wrapper>
                 <div className='flex flex-col lg:flex-row md:px-10 gap-[50px] lg:gap-[100px]'>
                     {/* <-----Left column start-----> */}
                     <div className='w-full md:w-auto flex-[1.5] max-w-[500px] lg:mx-w-full mx-auto lg:mx-0'>
-                        <ProductDetailsCarousel></ProductDetailsCarousel>
+                        <ProductDetailsCarousel images={p.image.data}></ProductDetailsCarousel>
                     </div>
                     {/* <-----Left column End-----> */}
 
@@ -131,12 +134,42 @@ const ProductDetails = () => {
                     {/* <-----Right column end-----> */}
                 </div>
 
-                <div>
+                {/* <div>
                     <RelatedProducts></RelatedProducts>
-                </div>
+                </div> */}
             </Wrapper>
         </div>
     );
 };
 
 export default ProductDetails;
+
+export async function getStaticPaths() {
+    const products = await fetchDataFromApi("/api/products?populate=*");
+    const paths = products?.data?.map((p) => ({
+        params: {
+            slug: p.attributes.slug,
+        },
+    }));
+
+    return {
+        paths,
+        fallback: false,
+    };
+}
+
+export async function getStaticProps({ params: { slug } }) {
+    const product = await fetchDataFromApi(
+        `/api/products?populate=*&filters[slug][$eq]=${slug}`
+    );
+    const products = await fetchDataFromApi(
+        `/api/products?populate=*&[filters][slug][$ne]=${slug}`
+    );
+
+    return {
+        props: {
+            product,
+            products,
+        },
+    };
+}
