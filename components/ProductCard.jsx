@@ -4,7 +4,6 @@ import Link from "next/link";
 import React from "react";
 
 const ProductCard = ({ product }) => {
-  console.log(product);
   const { attributes: p, id } = product;
   return (
     <Link
