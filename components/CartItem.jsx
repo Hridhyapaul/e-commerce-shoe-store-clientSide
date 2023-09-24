@@ -1,9 +1,22 @@
 import Image from "next/image";
 import React from "react";
 import { RiDeleteBin6Line } from "react-icons/ri";
+import { updateCart } from "@/store/cartSlice";
+import { useDispatch } from "react-redux";
 
 const CartItem = ({ items }) => {
   const { selectedSize, attributes: p, oneQuantityPrice, quantity } = items;
+
+  const dispatch = useDispatch();
+
+  const updateCartItem = (e, key) => {
+    let payload = {
+      key,
+      val: key === "quantity" ? parseInt(e.target.value) : e.target.value,
+      id: items.id,
+    };
+    dispatch(updateCart(payload));
+  };
   return (
     <div className="flex py-5 gap-3 md:gap-5 border-b font-firstFont">
       {/* Image Start */}
@@ -45,7 +58,10 @@ const CartItem = ({ items }) => {
             {/* Size Dropdown Start */}
             <div className="flex items-center gap-1">
               <div className="font-semibold">Size:</div>
-              <select className="hover:text-black">
+              <select
+                className="hover:text-black"
+                onChange={(e) => updateCartItem(e, "selectedSize")}
+              >
                 {p.size.data.map((item, i) => {
                   return (
                     <option
@@ -65,9 +81,16 @@ const CartItem = ({ items }) => {
             {/* Quantity Dropdown Start */}
             <div className="flex items-center gap-1">
               <div className="font-semibold">Quantity:</div>
-              <select className="hover:text-black">
+              <select
+                className="hover:text-black"
+                onChange={(e) => updateCartItem(e, "quantity")}
+              >
                 {Array.from({ length: 10 }, (_, i) => i + 1).map((q, i) => {
-                  return <option key={i} value={q} selected={quantity === q}>{q}</option>;
+                  return (
+                    <option key={i} value={q} selected={quantity === q}>
+                      {q}
+                    </option>
+                  );
                 })}
               </select>
             </div>
