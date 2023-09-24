@@ -1,8 +1,9 @@
 import Image from "next/image";
 import React from "react";
 import { RiDeleteBin6Line } from "react-icons/ri";
-import { updateCart } from "@/store/cartSlice";
+import { updateCart, removeFromCart } from "@/store/cartSlice";
 import { useDispatch } from "react-redux";
+import Swal from "sweetalert2";
 
 const CartItem = ({ items }) => {
   const { selectedSize, attributes: p, oneQuantityPrice, quantity } = items;
@@ -97,7 +98,29 @@ const CartItem = ({ items }) => {
             {/* Quantity Dropdown End */}
           </div>
 
-          <RiDeleteBin6Line className="cursor-pointer text-black/[0.5] hover:text-black text-[16px] md:text-[20px]"></RiDeleteBin6Line>
+          <RiDeleteBin6Line
+            className="cursor-pointer text-black/[0.5] hover:text-black text-[16px] md:text-[20px]"
+            onClick={() => {
+              Swal.fire({
+                title: "Are you sure?",
+                text: "You won't be able to revert this!",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#3085d6",
+                cancelButtonColor: "#d33",
+                confirmButtonText: "Yes, delete it!",
+              }).then((result) => {
+                if (result.isConfirmed) {
+                  dispatch(removeFromCart({ id: items.id }));
+                  Swal.fire(
+                    "Deleted!",
+                    "Your item has been removed.",
+                    "success"
+                  );
+                }
+              });
+            }}
+          ></RiDeleteBin6Line>
         </div>
       </div>
     </div>
