@@ -21,7 +21,7 @@ This project showcases my proficiency in a wide range of technologies and my abi
 
 ## Tech Stack
 
-**Client:** HTML5, TailwindCSS, React, Redux,  
+**Client:** HTML5, TailwindCSS, React, Next.js, Redux,  
 
 **Server:** Strapi, Cloudinary, Insomnia, Stripe Payment
 
