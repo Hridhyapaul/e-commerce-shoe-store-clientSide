@@ -1,38 +1,31 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# Smart Shoe Store
 
-First, run the development server:
+The Smart Shoe Store website is a dynamic e-commerce platform designed to provide an engaging and efficient shopping experience for footwear enthusiasts. This project showcases my expertise in web development, user experience design, state management, content management, image hosting, API testing, and online payment integration.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+This project showcases my proficiency in a wide range of technologies and my ability to create a fully functional and user-centric e-commerce platform. It demonstrates expertise in web development, user experience design, payment integration, authentication implementation, and content management.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Features
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- **Product Catalog:** The website boasts an extensive catalog of shoes, categorized by type and allowing users to easily browse and find their desired footwear.
+- **Shopping Cart:** Users can add and remove items from their shopping carts, view order summaries, and proceed to checkout seamlessly.
+- **Stripe Payment Integration:** The website securely processes payments through Stripe, offering multiple payment methods and ensuring data security.
+- **Responsive Design:** The website is designed to work flawlessly on desktops, tablets, and mobile devices, providing a consistent user experience.
+- **Image Optimization:** Cloudinary is used to store and optimize product images, ensuring fast loading times and a visually appealing presentation.
+- **Content Management:** Strapi serves as the content management system, enabling easy updates and additions to product listings and other content.
+- **API Testing:** Insomnia is utilized for testing API endpoints, ensuring that data is retrieved and updated accurately.
+- **SEO-Friendly:** Next.js provides server-side rendering and SEO optimization, improving search engine rankings and site performance.
 
-## Learn More
+## Tech Stack
 
-To learn more about Next.js, take a look at the following resources:
+**Client:** HTML5, TailwindCSS, React, Redux,  
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**Server:** Strapi, Cloudinary, Insomnia, Stripe Payment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Live Link
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+https://e-commerce-shoe-store-client-side.vercel.app/
