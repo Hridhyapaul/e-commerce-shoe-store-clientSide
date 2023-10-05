@@ -33,7 +33,7 @@ const HeroBanner = () => {
                 <div>
                     <img
                         src="/slide-1.png"
-                        className="aspect-[16/10] md:aspect-auto w-[1200px] h-[700px] object-cover"
+                        className="aspect-[16/10] md:aspect-auto md:w-[1200px] md:h-[700px] object-cover"
                     />
                     <div className="px-[15px] md:px-[40px] py-[10px] md:py-[20px] font-secondFont font-bold bg-white absolute bottom-[25px] md:bottom-[75px] left-0 text-black/[0.9] text-[15px] md:text-[30px] uppercase cursor-pointer hover:opacity-90">
                         Shop now
@@ -43,7 +43,7 @@ const HeroBanner = () => {
                 <div>
                     <img
                         src="/slide-2.png"
-                        className="aspect-[16/10] md:aspect-auto w-[1200px] h-[700px] object-cover"
+                        className="aspect-[16/10] md:aspect-auto md:w-[1200px] md:h-[700px] object-cover"
                     />
                     <div className="px-[15px] md:px-[40px] py-[10px] md:py-[20px] font-secondFont font-bold bg-white absolute bottom-[25px] md:bottom-[75px] left-0 text-black/[0.9] text-[15px] md:text-[30px] uppercase cursor-pointer hover:opacity-90">
                         Shop now
@@ -53,7 +53,7 @@ const HeroBanner = () => {
                 <div>
                     <img
                         src="/slide-3.png"
-                        className="aspect-[16/10] md:aspect-auto w-[1200px] h-[700px] object-cover"
+                        className="aspect-[16/10] md:aspect-auto md:w-[1200px] md:h-[700px] object-cover"
                     />
                     <div className="px-[15px] md:px-[40px] py-[10px] md:py-[20px] font-secondFont font-bold bg-white absolute bottom-[25px] md:bottom-[75px] left-0 text-black/[0.9] text-[15px] md:text-[30px] uppercase cursor-pointer hover:opacity-90">
                         Shop now
