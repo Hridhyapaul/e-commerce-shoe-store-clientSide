@@ -2,13 +2,13 @@ import React from "react";
 
 const Featured = () => {
   return (
-    <div className="md:mt-[60px] mt-[40px]">
+    <div className="md:mt-[100px] mt-[40px]">
       <div className="mb-10">
-        <h1 className="text-[28px] md:text-[34px] font-semibold leading-tight">
+        <h1 className="text-[28px] md:text-[34px] font-semibold leading-tight text-slate-900">
           Featured
         </h1>
 
-        <div className="text-md md:text-xl">
+        <div className="text-md md:text-xl text-slate-900">
           Embark on a Journey of Comfort and Style with Smart's Finest Footwear
         </div>
       </div>

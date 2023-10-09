@@ -17,7 +17,7 @@ const ProductCard = ({ product }) => {
         alt={p.name}
         // className="w-[500px] h-[300px]"
       />
-      <div className="p-4 text-black/[0.9] bg-black/[0.3]">
+      <div className="p-4 text-black/[0.9] bg-slate-700">
         <h2 className="text-xl font-medium text-white">{p.name}</h2>
         <div className="flex items-center text-black/[0.5] mt-2">
           <p className="mr-2 text-lg text-white font-semibold">${p.price}</p>
