@@ -28,6 +28,8 @@ export default function Home({ products }) {
             <ProductCard key={product?.id} product={product}></ProductCard>
           ))}
         </div>
+
+        
       </Wrapper>
     </main>
   );
