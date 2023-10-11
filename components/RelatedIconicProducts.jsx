@@ -3,7 +3,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import AlwaysIconicCard from "./AlwaysIconicCard";
 
-const AlwaysIconic = ({ iconicProducts }) => {
+const RelatedIconicProducts = ({products}) => {
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
@@ -18,25 +18,20 @@ const AlwaysIconic = ({ iconicProducts }) => {
       items: 1,
     },
   };
-
   return (
-    <div className="mt-[50px] md:mt-[100px] mb-[100px] md:mb-[150px]">
-      <div className="text-2xl font-bold mb-5">Always Iconic</div>
+    <div className="mt-[50px] md:mt-[100px] mb-[100px] md:mb-0">
+      <div className="text-2xl font-bold mb-5">You Might Also Like</div>
       <Carousel
         responsive={responsive}
         containerClass="-mx-[10px]"
         itemClass="px-[10px]"
       >
-        {iconicProducts?.data?.length > 0 ? (
-          iconicProducts.data.map((product) => (
-            <AlwaysIconicCard key={product?.id} product={product} />
-          ))
-        ) : (
-          <p>No products available</p>
-        )}
+        {products?.data?.map((product) => (
+          <AlwaysIconicCard key={product?.id} product={product} />
+        ))}
       </Carousel>
     </div>
   );
 };
 
-export default AlwaysIconic;
+export default RelatedIconicProducts;

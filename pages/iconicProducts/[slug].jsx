@@ -2,7 +2,6 @@ import Wrapper from "@/components/Wrapper";
 import React, { useState } from "react";
 import { IoMdHeartEmpty } from "react-icons/io";
 import ProductDetailsCarousel from "@/components/ProductDetailsCarousel";
-import RelatedProducts from "@/components/RelatedProducts";
 import { fetchDataFromApi } from "@/utils/api";
 import { getDiscountedPricePercentage } from "@/utils/helper";
 import ReactMarkdown from "react-markdown";
@@ -11,6 +10,7 @@ import { addToCart } from "@/store/cartSlice";
 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import RelatedIconicProducts from "@/components/RelatedIconicProducts";
 
 const ProductDetails = ({ product, products }) => {
   const [selectedSize, setSelectedSize] = useState();
@@ -161,7 +161,7 @@ const ProductDetails = ({ product, products }) => {
         </div>
 
         <div>
-          <RelatedProducts products={products}></RelatedProducts>
+          <RelatedIconicProducts products={products}></RelatedIconicProducts>
         </div>
       </Wrapper>
     </div>

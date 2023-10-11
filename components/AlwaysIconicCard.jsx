@@ -11,11 +11,11 @@ const AlwaysIconicCard = ({ product }) => {
       className="transform overflow-hidden bg-white duration-200 hover:scale-105 cursor-pointer"
     >
       <Image
-        width={500}
-        height={500}
+        width={400}
+        height={400}
         src={p.thumbnail.data.attributes.url}
         alt={p.name}
-        // className="w-[500px] h-[300px]"
+        className="w-[500px] h-[400px] object-cover"
       />
       <div className="p-4 text-black/[0.9] bg-slate-700">
         <h2 className="text-xl font-medium text-white">{p.name}</h2>
