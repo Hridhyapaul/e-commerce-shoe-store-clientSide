@@ -4,6 +4,7 @@ import "react-multi-carousel/lib/styles.css";
 import AlwaysIconicCard from "./AlwaysIconicCard";
 
 const AlwaysIconic = ({ iconicProducts }) => {
+  console.log(iconicProducts)
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },

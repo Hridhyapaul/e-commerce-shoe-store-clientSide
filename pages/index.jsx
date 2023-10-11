@@ -2,12 +2,13 @@ import AlwaysIconic from "@/components/AlwaysIconic";
 import Featured from "@/components/Featured";
 import HeroBanner from "@/components/HeroBanner";
 import ProductCard from "@/components/ProductCard";
+import ShopBySport from "@/components/ShopBySport";
 import Trending from "@/components/Trending";
 import Wrapper from "@/components/Wrapper";
 import { fetchDataFromApi } from "@/utils/api";
 
-export default function Home({ products, iconicProducts }) {
-  console.log(iconicProducts)
+export default function Home({ products, iconicProducts, shopByProducts }) {
+  console.log(iconicProducts);
   return (
     <main>
       <HeroBanner></HeroBanner>
@@ -30,7 +31,7 @@ export default function Home({ products, iconicProducts }) {
             <ProductCard key={product?.id} product={product}></ProductCard>
           ))}
         </div>
-
+        <ShopBySport shopByProducts={shopByProducts}></ShopBySport>
         <AlwaysIconic iconicProducts={iconicProducts}></AlwaysIconic>
       </Wrapper>
     </main>
@@ -43,7 +44,10 @@ export async function getStaticProps() {
   const iconicProducts = await fetchDataFromApi(
     "/api/iconic-products?populate=*"
   );
+  const shopByProducts = await fetchDataFromApi(
+    "/api/shop-by-sports?populate=*"
+  );
   return {
-    props: { products, iconicProducts },
+    props: { products, iconicProducts, shopByProducts },
   };
 }
