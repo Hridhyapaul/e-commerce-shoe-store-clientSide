@@ -1,3 +1,4 @@
+import AlwaysIconic from "@/components/AlwaysIconic";
 import Featured from "@/components/Featured";
 import HeroBanner from "@/components/HeroBanner";
 import ProductCard from "@/components/ProductCard";
@@ -5,7 +6,8 @@ import Trending from "@/components/Trending";
 import Wrapper from "@/components/Wrapper";
 import { fetchDataFromApi } from "@/utils/api";
 
-export default function Home({ products }) {
+export default function Home({ products, iconicProducts }) {
+  console.log(iconicProducts)
   return (
     <main>
       <HeroBanner></HeroBanner>
@@ -29,7 +31,7 @@ export default function Home({ products }) {
           ))}
         </div>
 
-        
+        <AlwaysIconic iconicProducts={iconicProducts}></AlwaysIconic>
       </Wrapper>
     </main>
   );
@@ -37,7 +39,11 @@ export default function Home({ products }) {
 
 export async function getStaticProps() {
   const products = await fetchDataFromApi("/api/products?populate=*");
+
+  const iconicProducts = await fetchDataFromApi(
+    "/api/iconic-products?populate=*"
+  );
   return {
-    props: { products },
+    props: { products, iconicProducts },
   };
 }

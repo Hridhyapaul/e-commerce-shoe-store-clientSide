@@ -1,10 +1,13 @@
+import Link from "next/link";
 import React from "react";
+import { getDiscountedPricePercentage } from "@/utils/helper";
+import Image from "next/image";
 
 const AlwaysIconicCard = ({ product }) => {
   const { attributes: p, id } = product;
   return (
     <Link
-      href={`/product/${p.slug}`}
+      href={`/iconicProducts/${p.slug}`}
       className="transform overflow-hidden bg-white duration-200 hover:scale-105 cursor-pointer"
     >
       <Image

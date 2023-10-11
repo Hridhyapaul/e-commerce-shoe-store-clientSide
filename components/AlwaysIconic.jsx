@@ -1,8 +1,9 @@
 import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import AlwaysIconicCard from "./AlwaysIconicCard";
 
-const AlwaysIconic = () => {
+const AlwaysIconic = ({ iconicProducts }) => {
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
@@ -26,9 +27,13 @@ const AlwaysIconic = () => {
         containerClass="-mx-[10px]"
         itemClass="px-[10px]"
       >
-        {products?.data?.map((product) => (
-          <ProductCard key={product?.id} product={product} />
-        ))}
+        {iconicProducts?.data?.length > 0 ? (
+          iconicProducts.data.map((product) => (
+            <AlwaysIconicCard key={product?.id} product={product} />
+          ))
+        ) : (
+          <p>No products available</p>
+        )}
       </Carousel>
     </div>
   );
