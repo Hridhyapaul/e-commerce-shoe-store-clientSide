@@ -16,7 +16,7 @@ const HeroBanner = () => {
                 renderArrowPrev={(clickHandler, hasPrev) => (
                     <div
                         onClick={clickHandler}
-                        className="absolute right-[42px] md:right-[62px] bottom-2 w-[30px] md:w-[50px] h-[30px] md:h-[50px] bg-black rounded-full z-10 flex items-center justify-center cursor-pointer hover:opacity-90"
+                        className="absolute right-[42px] md:right-[62px] bottom-2 w-[30px] md:w-[50px] h-[30px] md:h-[50px] bg-slate-800 rounded-full z-10 flex items-center justify-center cursor-pointer hover:opacity-90"
                     >
                         <BiArrowBack className="text-sm md:text-lg"></BiArrowBack>
                     </div>
@@ -24,7 +24,7 @@ const HeroBanner = () => {
                 renderArrowNext={(clickHandler, hasNext) => (
                     <div
                         onClick={clickHandler}
-                        className="absolute right-2 bottom-2 w-[30px] md:w-[50px] h-[30px] md:h-[50px] bg-black rounded-full z-10 flex items-center justify-center cursor-pointer hover:opacity-90"
+                        className="absolute right-2 bottom-2 w-[30px] md:w-[50px] h-[30px] md:h-[50px] bg-slate-800 rounded-full z-10 flex items-center justify-center cursor-pointer hover:opacity-90"
                     >
                         <BiArrowBack className="rotate-180 text-sm md:text-lg" />
                     </div>
@@ -35,9 +35,6 @@ const HeroBanner = () => {
                         src="/slide-2.png"
                         className="aspect-[16/10] md:aspect-auto md:w-[1200px] md:h-[700px] object-cover"
                     />
-                    <div className="px-[15px] md:px-[40px] py-[10px] md:py-[20px] font-secondFont font-bold bg-white absolute bottom-[25px] md:bottom-[75px] left-0 text-slate-900 text-[15px] md:text-[30px] uppercase cursor-pointer hover:opacity-90">
-                        Shop now
-                    </div>
                 </div>
 
                 <div>
@@ -45,9 +42,6 @@ const HeroBanner = () => {
                         src="/slide-3.png"
                         className="aspect-[16/10] md:aspect-auto md:w-[1200px] md:h-[700px] object-cover"
                     />
-                    <div className="px-[15px] md:px-[40px] py-[10px] md:py-[20px] font-secondFont font-bold bg-white absolute bottom-[25px] md:bottom-[75px] left-0 text-slate-900 text-[15px] md:text-[30px] uppercase cursor-pointer hover:opacity-90">
-                        Shop now
-                    </div>
                 </div>
 
                 <div>
@@ -55,9 +49,6 @@ const HeroBanner = () => {
                         src="/slide-1.png"
                         className="aspect-[16/10] md:aspect-auto md:w-[1200px] md:h-[700px] object-cover"
                     />
-                    <div className="px-[15px] md:px-[40px] py-[10px] md:py-[20px] font-secondFont font-bold bg-white absolute bottom-[25px] md:bottom-[75px] left-0 text-slate-900 text-[15px] md:text-[30px] uppercase cursor-pointer hover:opacity-90">
-                        Shop now
-                    </div>
                 </div>
             </Carousel>
         </div>

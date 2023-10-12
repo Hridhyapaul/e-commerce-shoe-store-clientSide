@@ -1,48 +1,60 @@
-import React from "react";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from "react-responsive-carousel";
-import { BiArrowBack } from "react-icons/bi";
+import React, { useState } from "react";
+import ShopBySportCard from "./ShopBySportCard";
+import Slider from "react-slick";
+import NextArrow from "./NextArrow";
+import PrevArrow from "./PrevArrow";
 
 const ShopBySport = ({ shopByProducts }) => {
-  console.log(shopByProducts);
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const settings = {
+    arrows: true,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    initialSlide: 0,
+    prevArrow: <PrevArrow></PrevArrow>,
+    nextArrow: <NextArrow></NextArrow>,
+    beforeChange: (current, next) => setCurrentSlide(next),
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  };
   return (
-    <div className="relative text-white text-[20px] w-full max-w-[1360px] mx-auto font-secondFont">
-      <Carousel
-        autoPlay={true}
-        infiniteLoop={true}
-        showThumbs={false}
-        showArrows={false}
-        showIndicators={false}
-        showStatus={false}
-        renderArrowPrev={(clickHandler, hasPrev) => (
-          <div
-            onClick={clickHandler}
-            className="absolute right-[42px] md:right-[62px] bottom-2 w-[30px] md:w-[50px] h-[30px] md:h-[50px] bg-black rounded-full z-10 flex items-center justify-center cursor-pointer hover:opacity-90"
-          >
-            <BiArrowBack className="text-sm md:text-lg"></BiArrowBack>
-          </div>
-        )}
-        renderArrowNext={(clickHandler, hasNext) => (
-          <div
-            onClick={clickHandler}
-            className="absolute right-2 bottom-2 w-[30px] md:w-[50px] h-[30px] md:h-[50px] bg-black rounded-full z-10 flex items-center justify-center cursor-pointer hover:opacity-90"
-          >
-            <BiArrowBack className="rotate-180 text-sm md:text-lg" />
-          </div>
-        )}
-      >
-        {shopByProducts.data.map((product) => (
-          <div key={product.id}>
-            <img
-              src="/slide-2.png"
-              className="aspect-[16/10] md:aspect-auto md:w-[1200px] md:h-[700px] object-cover"
-            />
-            <div className="px-[15px] md:px-[40px] py-[10px] md:py-[20px] font-secondFont font-bold bg-white absolute bottom-[25px] md:bottom-[75px] left-0 text-slate-900 text-[15px] md:text-[30px] uppercase cursor-pointer hover:opacity-90">
-              Shop now
-            </div>
-          </div>
-        ))}
-      </Carousel>
+    <div className="relative mt-[100px]">
+      <div className="mb-5">
+        <div className="text-2xl font-bold">Shop by Sport</div>
+        <div className="text-md md:text-xl text-slate-900">
+          Elevate Your Game with Premium Athletic Footwear
+        </div>
+      </div>
+      <div className="">
+        <Slider {...settings}>
+          {shopByProducts.data.map((product) => (
+            <ShopBySportCard
+              key={product.id}
+              product={product}
+            ></ShopBySportCard>
+          ))}
+        </Slider>
+      </div>
     </div>
   );
 };
