@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 const Footer = () => {
     return (
-        <footer className="bg-black text-white pt-14 pb-3 font-firstFont">
+        <footer className="bg-slate-800 text-white pt-14 pb-3 font-firstFont">
             <Wrapper className="flex justify-between flex-col md:flex-row gap-[50px] md:gap-0">
                 {/* <----- Left Start -----> */}
                 <div className="flex gap-[50px] md:gap-[75px] lg:gap-[100px] flex-col md:flex-row">
@@ -84,20 +84,20 @@ const Footer = () => {
                         onClick={() =>
                             window.open("https://facebook.com", "_blank")
                         }
-                        className="w-10 h-10 rounded-full bg-white/[0.25] flex items-center justify-center text-black hover:bg-white/[0.5] cursor-pointer"
+                        className="w-10 h-10 rounded-full bg-white/[0.25] flex items-center justify-center text-slate-800 hover:bg-white/[0.5] cursor-pointer"
                     >
                         <FaFacebookF size={20} />
                     </div>
                     <Link
                         href="https://twitter.com"
-                        className="w-10 h-10 rounded-full bg-white/[0.25] flex items-center justify-center text-black hover:bg-white/[0.5] cursor-pointer"
+                        className="w-10 h-10 rounded-full bg-white/[0.25] flex items-center justify-center text-slate-800 hover:bg-white/[0.5] cursor-pointer"
                     >
                         <FaTwitter size={20} />
                     </Link>
-                    <div className="w-10 h-10 rounded-full bg-white/[0.25] flex items-center justify-center text-black hover:bg-white/[0.5] cursor-pointer">
+                    <div className="w-10 h-10 rounded-full bg-white/[0.25] flex items-center justify-center text-slate-800 hover:bg-white/[0.5] cursor-pointer">
                         <FaYoutube size={20} />
                     </div>
-                    <div className="w-10 h-10 rounded-full bg-white/[0.25] flex items-center justify-center text-black hover:bg-white/[0.5] cursor-pointer">
+                    <div className="w-10 h-10 rounded-full bg-white/[0.25] flex items-center justify-center text-slate-800 hover:bg-white/[0.5] cursor-pointer">
                         <FaInstagram size={20} />
                     </div>
                 </div>
